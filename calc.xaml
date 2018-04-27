@@ -1,0 +1,112 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="300"  MinWidth="300" MinHeight="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <!-- Left padding. -->
+            <ColumnDefinition Width="1.0*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <!-- Col 1-2 padding. -->
+            <ColumnDefinition Width="1.0*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <!-- Col 2-3 padding. -->
+            <ColumnDefinition Width="1.0*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <!-- Col 3-4 padding. -->
+            <ColumnDefinition Width="1.0*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <!-- Col 4-5 padding. -->
+            <ColumnDefinition Width="1.0*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <!-- Right padding. -->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18"/>
+            <!-- Editor bar. -->
+            <RowDefinition Height="60"/>
+            <!-- Info bar. -->
+            <RowDefinition Height="10*"/>
+            <!-- Row padding. -->
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="10*"/>
+            <!-- Row padding. -->
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="10*"/>
+            <!-- Row padding. -->
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="11*"/>
+            <!-- Row padding. -->
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="10*"/>
+            <!-- Row padding. -->
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="11*"/>
+            <!-- Row padding. -->
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="5*"/>
+            <!-- Bottom padding. -->
+        </Grid.RowDefinitions>
+        <TextBlock Name="Memory"           Grid.Row="0"  Grid.Column="1" Text="" />
+        <TextBlock Name="Info"             Grid.Row="0"  Grid.Column="3" Text="" Grid.ColumnSpan="7"
+        		   TextAlignment="Right" />
+        <TextBox   Name="Entry"            Grid.Row="1"  Grid.Column="0"      Grid.ColumnSpan="11"
+                   TextAlignment="Right"   FontSize="48" BorderThickness="2"  BorderBrush="#CCCCCC" Text=""/>
+
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="MemoryClear"         Grid.Row="3"  Grid.Column="1" Content="MC" FontWeight="Bold" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="MemoryRecall"        Grid.Row="3"  Grid.Column="3" Content="MR" FontWeight="Bold" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="MemorySave"          Grid.Row="3"  Grid.Column="5" Content="MS" FontWeight="Bold" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="MemoryAdd"           Grid.Row="3"  Grid.Column="7" Content="M+" FontWeight="Bold" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="MemorySubstract"     Grid.Row="3"  Grid.Column="9" Content="M-" FontWeight="Bold" />
+
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="EditDeleteLast"      Grid.Row="5"  Grid.Column="1" Content="←" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="EditClearEntry"      Grid.Row="5"  Grid.Column="3" Content="CE" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="EditClearAll"        Grid.Row="5"  Grid.Column="5" Content="C" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateDivide"     Grid.Row="5"  Grid.Column="7" Content="/" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateSqrt"       Grid.Row="5"  Grid.Column="9" Content="x ¹/²" />
+
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberSeven"         Grid.Row="7"  Grid.Column="1" >
+            <TextBlock Text="7"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberEight"         Grid.Row="7"  Grid.Column="3" >
+            <TextBlock Text="8"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberNine"          Grid.Row="7"  Grid.Column="5" >
+            <TextBlock Text="9"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateMultiply"   Grid.Row="7"  Grid.Column="7" Content="*" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateSquare"     Grid.Row="7"  Grid.Column="9" Content="x ²" />
+
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberFour"          Grid.Row="9" Grid.Column="1" >
+            <TextBlock Text="4"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberFife"          Grid.Row="9" Grid.Column="3" >
+            <TextBlock Text="5"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberSix"           Grid.Row="9" Grid.Column="5" >
+            <TextBlock Text="6"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateSubtract"   Grid.Row="9" Grid.Column="7" Content="-" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateReciprocal" Grid.Row="9" Grid.Column="9" Content="1/x" />
+
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberOne"           Grid.Row="11" Grid.Column="1" >
+            <TextBlock Text="1"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberTwo"           Grid.Row="11" Grid.Column="3" >
+            <TextBlock Text="2"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberThree"         Grid.Row="11" Grid.Column="5" >
+            <TextBlock Text="3"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateAdd"        Grid.Row="11" Grid.Column="7" Content="+" />
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateResult"     Grid.Row="11" Grid.Column="9" Content="=" Grid.RowSpan="3" />
+
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberZero"          Grid.Row="13" Grid.Column="1" Grid.ColumnSpan="3">
+            <TextBlock Text="0"  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="NumberDecimalDot"    Grid.Row="13" Grid.Column="5" >
+            <TextBlock Text="."  FontWeight="Bold" />
+        </Button>
+        <Button FontSize="{DynamicResource ControlFontSize}" Name="CalculateNegate"     Grid.Row="13" Grid.Column="7" Content="+/-" />
+    </Grid>
+</Window>
